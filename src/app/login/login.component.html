@@ -1,0 +1,24 @@
+<form action="action_page.php" method="post">
+    <div class="imgcontainer">
+      <img src="../../assets/img.png" alt="Avatar" class="avatar">
+    </div>
+  
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required [(ngModel)]="facebook.username"/>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required [(ngModel)]="facebook.password" />
+  
+      <button type="submit" (click)="loginvalid()">Login</button>
+      <button type="button" (click)="register()" style="background-color:red;">Register</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn" >Cancel</button>
+      <span class="psw">Forgot <a (click)="getpassword()">password?</a></span>
+    </div>
+  </form>

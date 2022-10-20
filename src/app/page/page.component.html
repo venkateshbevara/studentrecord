@@ -1,0 +1,10 @@
+<form  #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)"  >  
+ <legend style = "background-color: #828d97; font-size:larger" > User Login </legend>   <br />  
+ <b > UserName </b>     <input required  #username="ngModel" ngModel name="username" type ="text"  /> <br />  
+ <br />  
+ <b > Password </b>     <input required #password="ngModel" name="password" ngModel  type="password" /> <br />  
+ <br />  
+ 
+  <button type="submit"   [disabled]="userForm.invalid" style="background-color:red">Submit!</button>
+
+</form> 
